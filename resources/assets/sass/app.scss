@@ -1,0 +1,110 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Variables
+@import "variables";
+// Materialize-css
+@import '~materialize-css/sass/materialize';
+
+@font-face {
+  font-family: "Belleza";
+  src: url("../../fonts/Belleza-Regular.ttf");
+}
+
+$white: color('shades', 'white');
+$black: color('shades', 'black');
+$text-color: color('grey', 'lighten-4');
+
+%full {
+  height: 100vh;
+}
+
+%no-bs {
+  box-shadow: none;
+}
+
+%no-rb {
+  border-radius: 0;
+}
+
+%ovr-form {
+  div.input-field {
+	padding: 1%;
+  }
+  .input-field label {
+	left: auto;
+	font-family: Belleza, 'Arimo', sans-serif;
+	color: $text-color !important;
+  }
+  .input-field input[type=text]:focus,
+  .input-field input[type=email]:focus,
+  .input-field input[type=password]:focus {
+	border-bottom: 1px solid #000;
+	box-shadow: 0 0 0 0 #000;
+  }
+  textarea.materialize-textarea {
+	&:focus {
+	  border-bottom: 1px solid #000;
+	  box-shadow: 0 0 0 0 #000;
+	}
+  }
+  .dropdown-content li > a,
+  .dropdown-content li > span {
+	color: color('shades', 'black');
+  }
+}
+
+body > .inner {
+  display: none;
+}
+
+body.pg-loaded > .inner {
+  display: block;
+}
+
+html {
+  font-size: 100%;
+  @media (max-width: 700px) {
+	font-size: 80%;
+  }
+  @media (max-width: 400px) {
+	font-size: 60%;
+  }
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: {
+	color: $black;
+	//image: linear-gradient(#fff 80%, #000 81%);
+  }
+;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+p {
+  font-family: Arimo, Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: {
+	weight: 900;
+	family: vanitybold_wide, Arial, sans-serif;
+  }
+
+}
+
+a {
+  font-family: Arimo, Arial, sans-serif;
+  color: $black;
+}
+
