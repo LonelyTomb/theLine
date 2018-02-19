@@ -18227,7 +18227,7 @@ if (Vel) {
     var swipeLeft = false;
     var swipeRight = false;
 
-    // Dismissible Collections
+    // Dismissible Collection
     $('.dismissable').each(function () {
       $(this).hammer({
         prevent_default: false

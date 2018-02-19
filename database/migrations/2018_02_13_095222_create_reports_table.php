@@ -6,26 +6,26 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateReportsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('reports', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });
-    }
+	/**
+	 * Run the migrations.
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('reports', function (Blueprint $table) {
+			$table->increments('id');
+			$table->integer('product_id');
+			$table->integer('total_sold');
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('reports');
-    }
+	/**
+	 * Reverse the migrations.
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('reports');
+	}
 }

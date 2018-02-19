@@ -14,5 +14,10 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+	return $request->user();
 });
+
+Route::apiResource('paypal', 'API/PayPalExpressController');
+Route::apiResource('cart', 'API/CartController');
+Route::apiResource('report', 'API/ReportController');
+Route::apiResource('checkout', 'API/CheckoutHistoryController');

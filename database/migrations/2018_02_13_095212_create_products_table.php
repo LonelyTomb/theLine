@@ -6,26 +6,31 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProductsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('products', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });
-    }
+	/**
+	 * Run the migrations.
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('products', function (Blueprint $table) {
+			$table->increments('id');
+			$table->string('name');
+			$table->string('collection_id')->index('collection_id');
+			$table->integer('price');
+			$table->string('status');
+			$table->integer('units_total');
+			$table->integer('units_remaining');
+			$table->string('image_link');
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('products');
-    }
+	/**
+	 * Reverse the migrations.
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('products');
+	}
 }
