@@ -23,9 +23,7 @@ class AdminRegisterController extends Controller
 	 * Where to redirect admins after registration.
 	 * @var string
 	 */
-	protected $redirectTo = '/home';
-
-	use RedirectAdmins;
+	protected $redirectTo = '/adminSite';
 
 	/**
 	 * Create a new controller instance.
@@ -76,7 +74,7 @@ class AdminRegisterController extends Controller
 	 */
 	public function showRegistrationForm()
 	{
-		return view('auth.register');
+		return view('admin.auth.register');
 	}
 
 	/**
@@ -93,7 +91,7 @@ class AdminRegisterController extends Controller
 		$this->guard()->login($admin);
 
 		return $this->registered($request, $admin)
-			?: redirect($this->redirectPath());
+			?: redirect()->intended($this->redirectPath());
 	}
 
 	/**

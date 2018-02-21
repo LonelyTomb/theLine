@@ -18562,7 +18562,7 @@ if (Vel) {
     var swipeLeft = false;
     var swipeRight = false;
 
-    // Dismissible Collection
+    // Dismissible Collections
     $('.dismissable').each(function () {
       $(this).hammer({
         prevent_default: false
@@ -37493,7 +37493,7 @@ if (token) {
      * The iteratee is invoked with three arguments: (value, index|key, collection).
      * Iteratee functions may exit iteration early by explicitly returning `false`.
      *
-     * **Note:** As with other "Collection" methods, objects with a "length"
+     * **Note:** As with other "Collections" methods, objects with a "length"
      * property are iterated like arrays. To avoid this behavior use `_.forIn`
      * or `_.forOwn` for object iteration.
      *
