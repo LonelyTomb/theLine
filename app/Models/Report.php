@@ -10,4 +10,9 @@ class Report extends Model
 	protected $fillable = [
 		'product_id', 'total_sold'
 	];
+
+	public function product()
+	{
+		$this->belongsTo(Product::class);
+	}
 }

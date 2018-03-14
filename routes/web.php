@@ -16,13 +16,14 @@ Route::get('/shop', 'SiteController@shop')->name('shop');
 Route::get('/about', 'SiteController@about')->name('about');
 Route::get('/faqs', 'SiteController@faqs')->name('faqs');
 Route::get('/contact', 'SiteController@contact')->name('contact');
-Route::get('/adminSite', 'SiteController@adminSite')->name('adminSite');
+Route::get('/adminSite', 'AdminController@home')->name('adminSite');
 
 Auth::routes();
 
 Route::prefix('admin')->group(function () {
 
-	Route::get('login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+	Route::get('login', 'Auth\AdminLoginController@showLoginForm')->name('admin.showLogin');
+	Route::post('login', 'Auth\AdminLoginController@login')->name('admin.login');
 
 //	Reset Admin Password
 	Route::prefix('password')->group(function () {
@@ -54,3 +55,4 @@ Route::resource('product', 'ProductController');
 Route::resource('collection', 'CollectionController');
 Route::resource('user', 'UserController');
 Route::resource('admin', 'AdminController');
+

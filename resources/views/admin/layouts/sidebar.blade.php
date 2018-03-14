@@ -17,7 +17,7 @@
 							{{--<img src="/assets/images/image.png" class="img-circle img-sm" alt="">--}}
 						</a>
 						<div class="media-body">
-							<span class="media-heading text-semibold">First name</span>
+							<span class="media-heading text-semibold">{{Auth::user()->first_name}}</span>
 							<div class="text-size-mini text-muted">
 							</div>
 						</div>
@@ -39,7 +39,7 @@
 								<li><a href="#"><i class=" icon-user-tie"></i><span>Admin</span></a>
 									<ul>
 										<li class="{{Route::is('admin/create') ? 'active' : ''}}">
-											<a href="{{route('admin.create')}}"><span>Create Admin</span></a>
+											<a href="{{route('admin.create')}}"><span>Create New Admin</span></a>
 										</li>
 										<li class="{{Route::is('admin/index') ? 'active' : ''}}">
 											<a href="{{route('admin.index')}}"><span></span>Update
@@ -59,29 +59,31 @@
 						</li>
 
 						<li>
-							<a href="#"><i class="icon-database-add"></i> <span>Create</span></a>
+							<a href="#"><i class="icon-database-add"></i> <span>Collections</span></a>
 							<ul>
 								<li class="{{Route::is('collection/create') ? 'active' : ''}}">
 									<a href="{{route('collection.create')}}">New Collection</a>
 								</li>
-								<li class="{{Route::is('product/create') ? 'active' : ''}}">
-									<a href="{{route('product.create')}}">New Product</a>
+								<li class="{{Route::is('collection/index') ? 'active' : ''}}">
+									<a href="{{route('collection.index')}}">Existing Collections</a>
+								</li>
+								<li class="{{Route::is('product/report') ? 'active' : ''}}">
+									<a href="">Collection Reports</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="#"><i class=" icon-database-menu"></i> <span>View</span></a>
+							<a href="#"><i class=" icon-database-menu"></i> <span>Products</span></a>
 							<ul>
-								<li class="{{Route::is('collection/index') ? 'active' : ''}}">
-									<a href="{{route('collection.index')}}">All Collections</a>
+								<li class="{{Route::is('product/create') ? 'active' : ''}}">
+									<a href="{{route('product.create')}}">New Product</a>
 								</li>
 								<li class="{{Route::is('product/index') ? 'active' : ''}}">
-									<a href="{{route('product.index')}}">All Products</a>
+									<a href="{{route('product.index')}}">Existing Products</a>
 								</li>
-								<li class
-								    ="{{Route::is('product/report') ? 'active' : ''}}"><a
-											href="">Products
-										Reports</a></li>
+								<li class="{{Route::is('product/report') ? 'active' : ''}}">
+									<a href="">Products Reports</a>
+								</li>
 							</ul>
 						</li>
 						<li>

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminLoginController extends Controller
 {
-	protected $redirectTo = '/adminSite';
+	protected $redirectTo = 'adminSite';
 
 	use AuthenticatesUsers;
 
@@ -28,6 +28,7 @@ class AdminLoginController extends Controller
 	{
 		return view('admin.auth.login');
 	}
+
 
 	/**
 	 * Log the user out of the application.

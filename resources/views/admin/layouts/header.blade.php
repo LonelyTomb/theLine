@@ -22,7 +22,7 @@
 				<a class="dropdown-toggle" data-toggle="dropdown">
 					{{--<img src="assets/images/image.png" alt="">--}}
 					@auth
-					<span>Firstname</span>
+						<span>{{Auth::user()->first_name}}</span>
 					@endauth
 					<i class="caret"></i>
 				</a>

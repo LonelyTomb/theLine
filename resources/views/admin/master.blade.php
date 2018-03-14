@@ -41,7 +41,7 @@
 	<!-- /theme JS files -->
 	@stack('scripts')
 </head>
-<body class="navbar-bottom {{Route::is('admin.login') ? 'login-container': ''}}">
+<body class="navbar-bottom {{Route::is('admin.showLogin') ? 'login-container': ''}}">
 @yield('content')
 </body>
 </html>

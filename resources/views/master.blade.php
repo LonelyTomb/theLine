@@ -33,10 +33,10 @@
 	@stack('scripts')
 </head>
 <body>
-@include('layout.header')
+@include('layouts.header')
 <main>
 	@yield('content')
 </main>
-@include('layout.footer')
+@include('layouts.footer')
 </body>
 </html>

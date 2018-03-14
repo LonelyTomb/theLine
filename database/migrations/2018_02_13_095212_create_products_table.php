@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
 			$table->string('status');
 			$table->integer('units_total');
 			$table->integer('units_remaining');
-			$table->string('image_link');
+			$table->string('image_link')->nullable();
 			$table->timestamps();
 		});
 	}

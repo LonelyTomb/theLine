@@ -12,6 +12,11 @@ class AdminController extends Controller
 		$this->middleware('auth:admin');
 	}
 
+	public function home()
+	{
+		return view('admin.welcome');
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 * @return \Illuminate\Http\Response

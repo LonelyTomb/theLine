@@ -17,6 +17,7 @@ class CreateCollectionsTable extends Migration
 			$table->string('name');
 			$table->text('description');
 			$table->string('status');
+			$table->string('image_link')->nullable();
 			$table->timestamps();
 		});
 	}
