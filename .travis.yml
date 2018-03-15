@@ -4,7 +4,7 @@ php:
 env:
   - LARAVEL_VERSION=5.6.*
 before_script:
-  - cp .env.ci .env
+  - cp  .env .env.travis
   - composer update
   - php artisan key:generate
 matrix:
