@@ -1,6 +1,12 @@
 language: php
 php:
-  - '7.1.3'
+- 7.1.3
 install:
 - php vendor/vendors.php
-composer install
+deploy:
+  provider: heroku
+  api_key:
+    secure: SxvM5NX7LmSkb1xSs3k/ku6f4RC0lGg2rQI8uN2Y3Ja0jA1LywrlW0G2Wt5jsIxKIYhzCMwjjYD8mQV8iS69llkDHrJqR5oLayh+fF+QpC0EI+iqDWl637OWiYtZ1/U3xYNzgVa1kQSNpKnqOc9M2cR3SIktELdGSXOr47vYpH7Wdf5OCQI8cEFzkxgL9Ip1JCcf1NfpnUngl+eUi9RCW2AZM7tKxGu0XKbjrHzC2DQVkXRy4MEyWfUVHtKRL6j7R/BciL+AA7fQSYCv+QEuuvGFKnI+limTfKbR8hlTDtt/JK0kbPQIxLOa0b7L4vaj8LQh4QmPIDPDdwOGnd5j3pYlZOYSlmd/VhkzdfM9ShdWCCD/nz1HdlpHggrSi25ixwnhsjRqnbqWocJWkBSvk+Uwl5k02k8Qwo37nVUPeCe6jDjKc2k6R5Kkt2rM/+zeAeQPFbW41s4shypYr7Z1VRrzmwkb9hmikE5D2uc2RS8jjytMRlrmgQuamGhF5vGrsiSQfjze+FV5K2B9rpFstDPOE7qW9EYuL7JR0tf1Q3aTECjFkejTI6Tt6DCHgeYX9AInNGekzoV6YkNMZBgpY9kilsGPsf9AbfOCU8bPQwsY42+jET67DVW6PcjHBGTj+lgwTW1LdLAyDlhydPQGhE5esMQnu7GUG61ftTNoXPI=
+  app: theline-heroku
+  on:
+    repo: LonelyTomb/theLine
