@@ -4,7 +4,9 @@ php:
 env:
   - LARAVEL_VERSION=5.6.*
 before_script:
+  - cp .env.ci .env
   - composer update
+  - php artisan key:generate
 matrix:
   - fast_finish
 deploy:
