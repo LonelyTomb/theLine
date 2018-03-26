@@ -8,12 +8,17 @@ class Product extends Model
 {
 	//
 	protected $fillable = [
-		'name', 'collection_id', 'price', 'status', 'units_total', 'units_remaining', 'image_link'
+		'name', 'collection_id', 'price', 'status', 'description', 'units_total', 'units_remaining', 'image_link'
 	];
 
 	public function collection()
 	{
-		$this->belongsTo(Collection::class);
+		return $this->belongsTo(Collection::class);
+	}
+
+	public function report()
+	{
+		return $this->hasOne(Report::class);
 	}
 
 }

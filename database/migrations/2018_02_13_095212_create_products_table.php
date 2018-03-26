@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
 			$table->string('collection_id')->index('collection_id');
 			$table->integer('price');
 			$table->string('status');
+			$table->string('description')->nullable();
 			$table->integer('units_total');
 			$table->integer('units_remaining');
 			$table->string('image_link')->nullable();

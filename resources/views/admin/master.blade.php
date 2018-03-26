@@ -40,6 +40,8 @@
 	<script type="text/javascript" src="{{asset('admin_assets/js/core/app.js')}}"></script>
 	<!-- /theme JS files -->
 	@stack('scripts')
+	@yield('styles')
+
 </head>
 <body class="navbar-bottom {{Route::is('admin.showLogin') ? 'login-container': ''}}">
 @yield('content')

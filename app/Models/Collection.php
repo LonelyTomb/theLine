@@ -12,11 +12,8 @@ class Collection extends Model
 	];
 
 
-	/**
-	 *
-	 */
-	public function product(): void
+	public function product()
 	{
-		$this->hasMany(Product::class);
+		return $this->hasMany(Product::class);
 	}
 }
