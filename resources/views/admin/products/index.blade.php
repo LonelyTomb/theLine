@@ -10,16 +10,14 @@
 	</style>
 @endsection
 @push('scripts')
+	<script type="text/javascript" src="{{asset('admin_assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('admin_assets/js/pages/form_select2.js')}}"></script>
 	<script type="text/javascript"
 	        src={{asset('admin_assets/js/plugins/tables/datatables/datatables.min.js')}}></script>
-	<script type="text/javascript"
-	        src={{asset('admin_assets/js/pages/datatables_extension_fixed_header.js')}}></script>
-	<script type="text/javascript"
-	        src={{asset('admin_assets/js/plugins/media/fancybox.min.js')}}></script>
-	<script type="text/javascript"
-	        src={{asset('admin_assets/js/plugins/forms/styling/uniform.min.js')}}></script>
-	<script type="text/javascript"
-	        src={{asset('admin_assets/js/pages/gallery_library.js')}}></script>
+	<script type="text/javascript" src={{asset('admin_assets/js/pages/datatables_extension_fixed_header.js')}}></script>
+	<script type="text/javascript" src={{asset('admin_assets/js/plugins/media/fancybox.min.js')}}></script>
+	<script type="text/javascript" src={{asset('admin_assets/js/plugins/forms/styling/uniform.min.js')}}></script>
+	<script type="text/javascript" src={{asset('admin_assets/js/pages/gallery_library.js')}}></script>
 @endpush
 @section('main-content')
 	<div class="panel panel-flat">

@@ -33,7 +33,9 @@
 			</div>
 		</div>
 		<div class="panel-body">
-			<form class="form" action="{{route('product.update',$product)}}" method="post" enctype="multipart/form-data">
+			<form class="form" action="{{route('product.update',$product->id)}}" method="post"
+			      enctype="multipart/form-data">
+				<input type="hidden" name="_method" value="PUT">
 				@csrf
 				<div class="form-group">
 					<label for="name">Product Name:</label>
@@ -51,9 +53,19 @@
 					       value="{{$product->price}}">
 				</div>
 				<div class="form-group">
-					<label for="units_total">Units Total:</label>
-					<input type="text" class="form-control" id="units_total" name="units_total" required
-					       value="{{$product->units_total}}">
+					<label for="units_remaining">Currently Available Stock:</label>
+					<input type="text" class="form-control" id="units_remaining" value="{{$product->units_remaining}}"
+					       disabled>
+				</div>
+				<div class="form-group">
+					<label for="units_total">Maximum Stock Available:</label>
+					<input type="number" class="form-control" id="units_total" value="{{$product->units_total}}"
+					       name="units_total">
+				</div>
+				<div class="form-group">
+					<label for="update_units_remaining">Update Available Stock:</label>
+					<input type="number" class="form-control" id="update_units_remaining" name="update_units_remaining"
+					       value="{{$product->units_remaining}}">
 				</div>
 				<div class="form-group">
 					<label for="status">Status:</label>

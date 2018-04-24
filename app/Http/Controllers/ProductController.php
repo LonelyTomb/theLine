@@ -33,6 +33,14 @@ class ProductController extends Controller
 		return view('admin.products.create', compact('collections'));
 	}
 
+	public function uploadImage($request, $product)
+	{
+		$filename = "{$request->name}.{$request->imageLink->extension()}";
+		$request->file('imageLink')->storeAs("public/uploads/{$request->collection}", $filename);
+		$product->image_link = "storage/uploads/{$request->collection}/{$filename}";
+		$product->save();
+	}
+
 	/**
 	 * Store a newly created resource in storage.
 	 * @param  \Illuminate\Http\Request $request
@@ -62,12 +70,9 @@ class ProductController extends Controller
 		]);
 
 		if ($request->file('imageLink')->isValid()) {
-			$filename = "{$request->name}.{$request->imageLink->extension()}";
-			$request->file('imageLink')->storeAs("public/uploads/{$request->collection}", $filename);
-			$product->image_link = "storage/uploads/{$request->collection}/{$filename}";
-			$product->save();
+			$this->uploadImage($request, $product);
 		}
-		return route('product.index');
+		return view('admin.product.index');
 	}
 
 	/**
@@ -98,28 +103,30 @@ class ProductController extends Controller
 	 */
 	public function update(Request $request, Product $product)
 	{
-		$imageLink = $request->imageLink ?? $product->image_link;
-		$validatedData = $request->validate([
-			'name' => 'required|min:3|unique:products',
-			'collection' => 'required',
-			'description' => 'nullable',
-			'price' => 'required',
-			'units_total' => 'required',
-			'status' => 'required',
-			'imageLink' => 'nullable|file|mimes:jpeg,png,jpg'
-		]);
+//		$validatedData = $request->validate([
+//			'name' => 'required|min:3|unique:products',
+//			'collection' => 'required',
+//			'description' => 'nullable',
+//			'price' => 'required',
+//			'units_total' => 'required',
+//			'update_units_remaining' => 'required',
+//			'status' => 'required',
+//			'imageLink' => 'nullable|file|mimes:jpeg,png,jpg'
+//		]);
 
-		$product = Product::create([
+		$imageLink = $request->imageLink ?? $product->image_link;
+		$product->update([
 			'name' => $request->name,
-			'collection_id' => $request->collection,
+			'collection_id' => $product->collection->id,
 			'price' => $request->price,
 			'status' => $request->status,
 			'description' => $request->description,
 			'units_total' => $request->units_total,
-			'units_remaining' => $request->units_total,
-			'imageLink' => $request->imageLink,
+			'units_remaining' => $request->update_units_remaining,
+			'imageLink' => $imageLink,
 		]);
-		return route('admin.products.index');
+
+		return $this->index();
 	}
 
 	/**

@@ -36,6 +36,7 @@ Route::prefix('admin')->group(function () {
 
 });
 Route::prefix('user')->group(function () {
+	Route::get('/profile', 'UserController@show')->name('profile');
 	//	Reset Password
 	Route::prefix('password')->group(function () {
 		Route::get('/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');   // step 1

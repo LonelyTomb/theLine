@@ -3,6 +3,8 @@
 	View Collections
 @endsection
 @push('scripts')
+	<script type="text/javascript" src="{{asset('admin_assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('admin_assets/js/pages/form_select2.js')}}"></script>
 	<script type="text/javascript"
 	        src={{asset('admin_assets/js/plugins/tables/datatables/datatables.min.js')}}></script>
 	<script type="text/javascript"

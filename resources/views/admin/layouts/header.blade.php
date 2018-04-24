@@ -29,7 +29,14 @@
 
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-					<li><a href="?logOut&admin"><i class="icon-switch2"></i> Logout</a></li>
+					<li>
+						<a href="{{ route('logout') }}"
+						   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
+									class="icon-switch2"></i> Logout</a>
+					</li>
+					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+						{{ csrf_field() }}
+					</form>
 				</ul>
 			</li>
 		</ul>
