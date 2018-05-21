@@ -9,6 +9,8 @@ before_script:
   - php artisan key:generate
 matrix:
   - fast_finish
+script:
+  -vendor/bin/phpunit
 deploy:
   provider: heroku
   api_key:
