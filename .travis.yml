@@ -10,7 +10,7 @@ before_script:
 matrix:
   - fast_finish
 script:
-  -vendor/bin/phpunit
+  - vendor/bin/phpunit
 deploy:
   provider: heroku
   api_key:
