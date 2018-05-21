@@ -8,7 +8,7 @@
 	<main class="main">
 		<div class="segment row home center-align" id="home">
 
-			<img src="<?php echo Site::getRoot(); ?>/dist/images/Tufafii-01-03-black2.png" alt="Tufafii logo"
+			<img src="/dist/images/Tufafii-01-03-black2.png" alt="Tufafii logo"
 			     class="responsive-img">
 			<div class="row home-controls">
 				<div class="col m6 first-half">
@@ -42,7 +42,7 @@
 				</p>
 				<a href="about" class="left-align white-text about_link">About<i class="mdi mdi-chevron-right"></i></a>
 			</div>
-			<img src="{{}}" alt=""
+			<img src="" alt=""
 			     class="responsive-img hide-on-small-and-down">
 		</div>
 		<div class="segment row shop grey lighten-4" data-speed="2" data-margin="10" id="shop">
@@ -52,7 +52,7 @@
 			<div class="row">
 				@foreach($products as $product)
 				<div class="card-panel col s6 m3">
-					<img src="{{}}"
+					<img src=""
 					     alt="{{$product->name}}" class="responsive-img ">
 					<div class="p_details">{{$product->name}}</div>
 				</div>
@@ -66,14 +66,14 @@
 			<h3 class="center-align">Who We Are On Instagram</h3>
 			<a href="" class="white-text">#TUFAFII</a>
 			<div class="instagram_snaps">
-				<a href=""><img src="<?php echo Site::getRoot() ?>/dist/images/House Of Kaya/1.jpg"
+				<a href=""><img src=""
 				                alt="" class="responsive-img"></a>
-				<a><img src="<?php echo Site::getRoot() ?>/dist/images/House Of Kaya/2.jpg" alt=""
+				<a><img src="" alt=""
 				        class="responsive-img"></a>
-				<a><img src="<?php echo Site::getRoot() ?>/dist/images/House Of Kaya/3.jpg"
+				<a><img src=""
 				        alt=""
 				        class="responsive-img"></a>
-				<a><img src="<?php echo Site::getRoot() ?>/dist/images/House Of Kaya/4.jpg"
+				<a><img src=""
 				        alt=""
 				        class="responsive-img"></a>
 			</div>

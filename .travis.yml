@@ -5,6 +5,7 @@ env:
   - LARAVEL_VERSION=5.6.*
 before_script:
   - composer update
+  - ln -s storage/app/public public/storage
   - cp .env.travis .env
   - php artisan key:generate
 matrix:
