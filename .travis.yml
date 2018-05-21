@@ -15,7 +15,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    - secure: "TfU1Sp5Zrv/+onuFUqt4o7ssLMt0fbYAqM873RmPpTfzZw8y8FtkcfLZmrGunfBYCD5Cc3iNDZ18NHoTnPgdngPBtTBspxNu0KZXbRSg4p/oG5HLDCdMm/bkH7MAg5MtU4a5nw2vo/5YrGdIRK0R3wGrSLlslAepTrArBpOvZ+fT4f+pG/Kh2xtTF5ICLMlAtgbzeuICZgpi96oy6LQ17i1id10TbAG2685stPOCshzLwdU++rZ6DqHKnOW8pQrU96iQrUu88T8yO61+qij7u7fbjmHzS1dP3QlOtYuHzUSmFWrcwO22hwUH0bJCXoGwW8zfrC6FeJKbe9Da/EHmKcvA2tgqZOsVaeLAAm84arxp/V4y7zJlRjkNJWySyGGMxYRcj4etjHlmgypO7u4GPFG4yd5JyI3DyQjEszrIIcvLl7gpZ/f3q7AZ/9KdE0tHiWGkYMBAf2HH44TLCAnTukkU4AC5UwJkuAOKmSz/fRywqEPDO6LXxtcuzpQgh8Xprz4tAEpftbzu6aZXc1i+mnS8O5vlouxrmj231Zu5OKkdY0suvzdc7yVNvNajW34xbhdkmM8ifpRNy3U/R+HT5CkQUwPsdRCDFQtVmZdiKHrl9Nw+lptdg7jLcFeTZwlRDsP2QZvG0E4u/v2JFCW+yIOl/8JFLOTbAm/wR9vho1Q="
+    - secure: "341d3377-f2dc-43c4-9625-7e9b633e85c7"
   app: theline-heroku
   on:
     repo: LonelyTomb/theLine
